@@ -2,10 +2,7 @@
 
 [TOC]
 
-### Server Info
-
-* IP: 147.11.94.20
-* user/pass: jackie/Li69nux*
+### Create user for the build
 
 To create new users for other desingers:
 ```
