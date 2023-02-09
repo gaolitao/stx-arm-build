@@ -20,7 +20,7 @@
 | 14   | STD    | sm                                  | jackie | Fixed       | Pass after 15 fixed                                |
 | 15   | STD    | sm-common                           | jackie | [Fixed][15] |                                                    |
 | 16   | STD    | sm-db                               | jackie | Fixed       | Pass after 15 fixed                                |
-| 17   | STD    | gpu-operator                        |        |             | The helm charts are outdated, should be removed.   |
+| 17   | STD    | gpu-operator                        | jackie | Fixed       | The helm charts are outdated, should be removed.   |
 | 18   | STD    | grub-efi                            |        |             |                                                    |
 | 19   | STD    | grub2                               |        |             |                                                    |
 | 20   | STD    | armada                              | jackie | Fixed       | Pass after 21, 22, 24 fixed                        |
@@ -108,62 +108,158 @@
 [51]: https://docs.starlingx.io/usertasks/kubernetes/vran-tools-2c3ee49f4b0b.html
 [52]: https://github.com/dynup/kpatch/#supported-architectures
 
-## Logs
+## Test Results
+
+### Results for 2023-02-09
 
 ```
-jackie@prj-oran-stx-deb-stx-builder-7f6d499b7b-flws9:/localdisk/loadbuild/jackie/prj-oran-stx-deb$ build-pkgs -c --parallel 10 -p metrics-server-helm,stx-metrics-server-helm,monitor-helm,monitor-helm-elastic,stx-monitor-helm,stx-nginx-ingress-controller-helm,stx-oidc-auth-helm,openstack-helm,stx-openstack-helm,stx-openstack-helm-fluxcd,platform-helm,stx-platform-helm,portieris-helm,stx-portieris-helm,stx-ptp-notification-helm,stx-snmp-helm,stx-vault-helm,vault-helm
+2023-02-09 13:26:35,566 - debcontroller - INFO: Total std packages needing to be built: 299
+2023-02-09 13:26:35,567 - debcontroller - INFO: -------------------------------------------
+2023-02-09 13:26:35,567 - debcontroller - INFO: Total std packages reused from remote: 0
+2023-02-09 13:26:35,567 - debcontroller - INFO: Total std packages needing to be built locally: 299
+2023-02-09 13:26:35,567 - debcontroller - INFO: Successfully built: 278
 
-2023-02-08 09:50:17,185 - debcontroller - INFO: Total std packages needing to be built: 18
-2023-02-08 09:50:17,185 - debcontroller - INFO: -------------------------------------------
-2023-02-08 09:50:17,185 - debcontroller - INFO: Total std packages reused from remote: 0
-2023-02-08 09:50:17,185 - debcontroller - INFO: Total std packages needing to be built locally: 18
-2023-02-08 09:50:17,185 - debcontroller - INFO: Successfully built: 18
-2023-02-08 09:50:17,186 - debcontroller - INFO: metrics-server-helm
-2023-02-08 09:50:17,187 - debcontroller - INFO: stx-metrics-server-helm
-2023-02-08 09:50:17,188 - debcontroller - INFO: monitor-helm
-2023-02-08 09:50:17,189 - debcontroller - INFO: monitor-helm-elastic
-2023-02-08 09:50:17,190 - debcontroller - INFO: stx-monitor-helm
-2023-02-08 09:50:17,191 - debcontroller - INFO: stx-nginx-ingress-controller-helm
-2023-02-08 09:50:17,193 - debcontroller - INFO: stx-oidc-auth-helm
-2023-02-08 09:50:17,194 - debcontroller - INFO: openstack-helm
-2023-02-08 09:50:17,195 - debcontroller - INFO: stx-openstack-helm
-2023-02-08 09:50:17,195 - debcontroller - INFO: stx-openstack-helm-fluxcd
-2023-02-08 09:50:17,196 - debcontroller - INFO: platform-helm
-2023-02-08 09:50:17,197 - debcontroller - INFO: stx-platform-helm
-2023-02-08 09:50:17,199 - debcontroller - INFO: portieris-helm
-2023-02-08 09:50:17,200 - debcontroller - INFO: stx-portieris-helm
-2023-02-08 09:50:17,201 - debcontroller - INFO: stx-ptp-notification-helm
-2023-02-08 09:50:17,202 - debcontroller - INFO: stx-snmp-helm
-2023-02-08 09:50:17,203 - debcontroller - INFO: stx-vault-helm
-2023-02-08 09:50:17,204 - debcontroller - INFO: vault-helm
-2023-02-08 09:50:17,204 - debcontroller - INFO: Total rt packages needing to be built: 0
-2023-02-08 09:50:17,204 - debcontroller - INFO: -------------------------------------------
-2023-02-08 09:50:17,204 - debcontroller - INFO: Total rt packages reused from remote: 0
-2023-02-08 09:50:17,204 - debcontroller - INFO: Total rt packages needing to be built locally: 0
-2023-02-08 09:50:17,204 - debcontroller - INFO: build-pkgs done
+2023-02-09 13:26:36,126 - debcontroller - ERROR: Failed to build: 21
+2023-02-09 13:26:36,128 - debcontroller - ERROR: grub-efi
+2023-02-09 13:26:36,130 - debcontroller - ERROR: grub2
+2023-02-09 13:26:36,131 - debcontroller - ERROR: kpatch
+2023-02-09 13:26:36,131 - debcontroller - ERROR: qemu
+2023-02-09 13:26:36,132 - debcontroller - ERROR: bnxt-en
+2023-02-09 13:26:36,133 - debcontroller - ERROR: i40e
+2023-02-09 13:26:36,134 - debcontroller - ERROR: i40e-cvl-2.54
+2023-02-09 13:26:36,135 - debcontroller - ERROR: iavf
+2023-02-09 13:26:36,136 - debcontroller - ERROR: iavf-cvl-2.54
+2023-02-09 13:26:36,138 - debcontroller - ERROR: ice
+2023-02-09 13:26:36,139 - debcontroller - ERROR: ice-cvl-2.54
+2023-02-09 13:26:36,140 - debcontroller - ERROR: igb-uio
+2023-02-09 13:26:36,141 - debcontroller - ERROR: kmod-opae-fpga-driver
+2023-02-09 13:26:36,142 - debcontroller - ERROR: iqvlinux
+2023-02-09 13:26:36,143 - debcontroller - ERROR: mlnx-ofed-kernel
+2023-02-09 13:26:36,144 - debcontroller - ERROR: qat1.7.l
+2023-02-09 13:26:36,145 - debcontroller - ERROR: linux
+2023-02-09 13:26:36,146 - debcontroller - ERROR: kpatch-prebuilt
+2023-02-09 13:26:36,147 - debcontroller - ERROR: pxe-network-installer
+2023-02-09 13:26:36,148 - debcontroller - ERROR: opae-sdk
+2023-02-09 13:26:36,148 - debcontroller - ERROR: pcm
 
-$ build-pkgs -c --parallel 10 -p stx-sdo-helm,istio-helm,kiali-helm,stx-istio-helm,stx-kubevirt-app-helm,stx-oran-o2-helm,stx-security-profiles-operator-helm,stx-sriov-fec-operator-helm,stx-sts-silicom-helm,stx-audit-helm,stx-cert-manager-helm
+2023-02-09 13:26:36,170 - debcontroller - INFO: Total rt packages reused from remote: 0
+2023-02-09 13:26:36,171 - debcontroller - INFO: Total rt packages needing to be built locally: 14
 
-2023-02-08 09:57:04,931 - debcontroller - INFO: Total std packages needing to be built: 11
-2023-02-08 09:57:04,931 - debcontroller - INFO: -------------------------------------------
-2023-02-08 09:57:04,931 - debcontroller - INFO: Total std packages reused from remote: 0
-2023-02-08 09:57:04,931 - debcontroller - INFO: Total std packages needing to be built locally: 11
-2023-02-08 09:57:04,931 - debcontroller - INFO: Successfully built: 11
-2023-02-08 09:57:04,933 - debcontroller - INFO: stx-sdo-helm
-2023-02-08 09:57:04,934 - debcontroller - INFO: istio-helm
-2023-02-08 09:57:04,936 - debcontroller - INFO: kiali-helm
-2023-02-08 09:57:04,937 - debcontroller - INFO: stx-istio-helm
-2023-02-08 09:57:04,939 - debcontroller - INFO: stx-kubevirt-app-helm
-2023-02-08 09:57:04,941 - debcontroller - INFO: stx-oran-o2-helm
-2023-02-08 09:57:04,942 - debcontroller - INFO: stx-security-profiles-operator-helm
-2023-02-08 09:57:04,944 - debcontroller - INFO: stx-sriov-fec-operator-helm
-2023-02-08 09:57:04,945 - debcontroller - INFO: stx-sts-silicom-helm
-2023-02-08 09:57:04,946 - debcontroller - INFO: stx-audit-helm
-2023-02-08 09:57:04,948 - debcontroller - INFO: stx-cert-manager-helm
-2023-02-08 09:57:04,948 - debcontroller - INFO: Total rt packages needing to be built: 0
-2023-02-08 09:57:04,949 - debcontroller - INFO: -------------------------------------------
-2023-02-08 09:57:04,949 - debcontroller - INFO: Total rt packages reused from remote: 0
-2023-02-08 09:57:04,949 - debcontroller - INFO: Total rt packages needing to be built locally: 0
-2023-02-08 09:57:04,949 - debcontroller - INFO: build-pkgs done
+2023-02-09 13:26:36,200 - debcontroller - INFO: List of failed packages:
+2023-02-09 13:26:36,201 - debcontroller - ERROR: bnxt-en
+2023-02-09 13:26:36,202 - debcontroller - ERROR: i40e
+2023-02-09 13:26:36,203 - debcontroller - ERROR: i40e-cvl-2.54
+2023-02-09 13:26:36,204 - debcontroller - ERROR: iavf
+2023-02-09 13:26:36,205 - debcontroller - ERROR: iavf-cvl-2.54
+2023-02-09 13:26:36,207 - debcontroller - ERROR: ice
+2023-02-09 13:26:36,208 - debcontroller - ERROR: ice-cvl-2.54
+2023-02-09 13:26:36,209 - debcontroller - ERROR: igb-uio
+2023-02-09 13:26:36,210 - debcontroller - ERROR: kmod-opae-fpga-driver
+2023-02-09 13:26:36,211 - debcontroller - ERROR: iqvlinux
+2023-02-09 13:26:36,212 - debcontroller - ERROR: mlnx-ofed-kernel
+2023-02-09 13:26:36,213 - debcontroller - ERROR: qat1.7.l
+2023-02-09 13:26:36,214 - debcontroller - ERROR: linux-rt
+2023-02-09 13:26:36,215 - debcontroller - ERROR: kpatch-prebuilt
+```
+
+### Results for 2023-02-02
+
+```
+2023-02-02 20:44:58,081 - debcontroller - INFO: Total std packages needing to be built: 298
+2023-02-02 20:44:58,081 - debcontroller - INFO: -------------------------------------------
+2023-02-02 20:44:58,081 - debcontroller - INFO: Total std packages reused from remote: 0
+2023-02-02 20:44:58,082 - debcontroller - INFO: Total std packages needing to be built locally: 298
+2023-02-02 20:44:58,082 - debcontroller - INFO: Successfully built: 229
+
+2023-02-02 20:44:58,551 - debcontroller - ERROR: Failed to build: 69
+2023-02-02 20:44:58,552 - debcontroller - ERROR: stx-sdo-helm
+2023-02-02 20:44:58,553 - debcontroller - ERROR: istio-helm
+2023-02-02 20:44:58,555 - debcontroller - ERROR: kiali-helm
+2023-02-02 20:44:58,556 - debcontroller - ERROR: stx-istio-helm
+2023-02-02 20:44:58,557 - debcontroller - ERROR: stx-kubevirt-app-helm
+2023-02-02 20:44:58,558 - debcontroller - ERROR: stx-oran-o2-helm
+2023-02-02 20:44:58,559 - debcontroller - ERROR: stx-security-profiles-operator-helm
+2023-02-02 20:44:58,560 - debcontroller - ERROR: stx-sriov-fec-operator-helm
+2023-02-02 20:44:58,561 - debcontroller - ERROR: stx-sts-silicom-helm
+2023-02-02 20:44:58,562 - debcontroller - ERROR: stx-audit-helm
+2023-02-02 20:44:58,564 - debcontroller - ERROR: stx-cert-manager-helm
+2023-02-02 20:44:58,567 - debcontroller - ERROR: registry-token-server
+2023-02-02 20:44:58,567 - debcontroller - ERROR: fm-mgr
+2023-02-02 20:44:58,568 - debcontroller - ERROR: sm
+2023-02-02 20:44:58,569 - debcontroller - ERROR: sm-common
+2023-02-02 20:44:58,570 - debcontroller - ERROR: sm-db
+2023-02-02 20:44:58,571 - debcontroller - ERROR: gpu-operator
+2023-02-02 20:44:58,573 - debcontroller - ERROR: grub-efi
+2023-02-02 20:44:58,574 - debcontroller - ERROR: grub2
+2023-02-02 20:44:58,575 - debcontroller - ERROR: armada
+2023-02-02 20:44:58,576 - debcontroller - ERROR: armada-helm-toolkit
+2023-02-02 20:44:58,578 - debcontroller - ERROR: chartmuseum
+2023-02-02 20:44:58,579 - debcontroller - ERROR: crictl
+2023-02-02 20:44:58,581 - debcontroller - ERROR: helm
+2023-02-02 20:44:58,582 - debcontroller - ERROR: kubernetes-1.21.8
+2023-02-02 20:44:58,583 - debcontroller - ERROR: kubernetes-1.22.5
+2023-02-02 20:44:58,584 - debcontroller - ERROR: kubernetes-1.23.1
+2023-02-02 20:44:58,585 - debcontroller - ERROR: kubernetes-1.24.4
+2023-02-02 20:44:58,586 - debcontroller - ERROR: kubectl-cert-manager
+2023-02-02 20:44:58,587 - debcontroller - ERROR: kpatch
+2023-02-02 20:44:58,588 - debcontroller - ERROR: qemu
+2023-02-02 20:44:58,589 - debcontroller - ERROR: bnxt-en
+2023-02-02 20:44:58,590 - debcontroller - ERROR: i40e
+2023-02-02 20:44:58,591 - debcontroller - ERROR: i40e-cvl-2.54
+2023-02-02 20:44:58,592 - debcontroller - ERROR: iavf
+2023-02-02 20:44:58,593 - debcontroller - ERROR: iavf-cvl-2.54
+2023-02-02 20:44:58,594 - debcontroller - ERROR: ice
+2023-02-02 20:44:58,595 - debcontroller - ERROR: ice-cvl-2.54
+2023-02-02 20:44:58,596 - debcontroller - ERROR: igb-uio
+2023-02-02 20:44:58,597 - debcontroller - ERROR: kmod-opae-fpga-driver
+2023-02-02 20:44:58,598 - debcontroller - ERROR: iqvlinux
+2023-02-02 20:44:58,599 - debcontroller - ERROR: mlnx-ofed-kernel
+2023-02-02 20:44:58,600 - debcontroller - ERROR: qat1.7.l
+2023-02-02 20:44:58,602 - debcontroller - ERROR: linux
+2023-02-02 20:44:58,602 - debcontroller - ERROR: kpatch-prebuilt
+2023-02-02 20:44:58,603 - debcontroller - ERROR: pxe-network-installer
+2023-02-02 20:44:58,604 - debcontroller - ERROR: mtce
+2023-02-02 20:44:58,604 - debcontroller - ERROR: mtce-common
+2023-02-02 20:44:58,605 - debcontroller - ERROR: metrics-server-helm
+2023-02-02 20:44:58,606 - debcontroller - ERROR: stx-metrics-server-helm
+2023-02-02 20:44:58,607 - debcontroller - ERROR: monitor-helm
+2023-02-02 20:44:58,608 - debcontroller - ERROR: monitor-helm-elastic
+2023-02-02 20:44:58,609 - debcontroller - ERROR: stx-monitor-helm
+2023-02-02 20:44:58,610 - debcontroller - ERROR: stx-nginx-ingress-controller-helm
+2023-02-02 20:44:58,611 - debcontroller - ERROR: stx-oidc-auth-helm
+2023-02-02 20:44:58,612 - debcontroller - ERROR: openstack-helm
+2023-02-02 20:44:58,614 - debcontroller - ERROR: openstack-helm-infra
+2023-02-02 20:44:58,614 - debcontroller - ERROR: stx-openstack-helm
+2023-02-02 20:44:58,615 - debcontroller - ERROR: stx-openstack-helm-fluxcd
+2023-02-02 20:44:58,616 - debcontroller - ERROR: platform-helm
+2023-02-02 20:44:58,617 - debcontroller - ERROR: stx-platform-helm
+2023-02-02 20:44:58,618 - debcontroller - ERROR: portieris-helm
+2023-02-02 20:44:58,619 - debcontroller - ERROR: stx-portieris-helm
+2023-02-02 20:44:58,620 - debcontroller - ERROR: stx-ptp-notification-helm
+2023-02-02 20:44:58,621 - debcontroller - ERROR: stx-snmp-helm
+2023-02-02 20:44:58,622 - debcontroller - ERROR: opae-sdk
+2023-02-02 20:44:58,623 - debcontroller - ERROR: pcm
+2023-02-02 20:44:58,623 - debcontroller - ERROR: stx-vault-helm
+2023-02-02 20:44:58,625 - debcontroller - ERROR: vault-helm
+
+2023-02-02 20:44:58,697 - debcontroller - INFO: Total rt packages needing to be built: 14
+2023-02-02 20:44:58,697 - debcontroller - INFO: -------------------------------------------
+2023-02-02 20:44:58,698 - debcontroller - INFO: Total rt packages reused from remote: 0
+2023-02-02 20:44:58,698 - debcontroller - INFO: Total rt packages needing to be built locally: 14
+2023-02-02 20:44:58,698 - debcontroller - ERROR: Failed to build: 14
+2023-02-02 20:44:58,699 - debcontroller - ERROR: bnxt-en
+2023-02-02 20:44:58,700 - debcontroller - ERROR: i40e
+2023-02-02 20:44:58,701 - debcontroller - ERROR: i40e-cvl-2.54
+2023-02-02 20:44:58,702 - debcontroller - ERROR: iavf
+2023-02-02 20:44:58,703 - debcontroller - ERROR: iavf-cvl-2.54
+2023-02-02 20:44:58,704 - debcontroller - ERROR: ice
+2023-02-02 20:44:58,705 - debcontroller - ERROR: ice-cvl-2.54
+2023-02-02 20:44:58,706 - debcontroller - ERROR: igb-uio
+2023-02-02 20:44:58,707 - debcontroller - ERROR: kmod-opae-fpga-driver
+2023-02-02 20:44:58,708 - debcontroller - ERROR: iqvlinux
+2023-02-02 20:44:58,709 - debcontroller - ERROR: mlnx-ofed-kernel
+2023-02-02 20:44:58,710 - debcontroller - ERROR: qat1.7.l
+2023-02-02 20:44:58,711 - debcontroller - ERROR: linux-rt
+2023-02-02 20:44:58,712 - debcontroller - ERROR: kpatch-prebuilt
 
 ```
