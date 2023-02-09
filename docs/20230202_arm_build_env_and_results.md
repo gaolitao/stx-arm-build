@@ -100,7 +100,7 @@ repo sync
 #### 5. Apply fixes and workarounds
 
 * Fixes and workarounds for downloader
-https://github.com/starlingx/tools/compare/master...jackiehjm:stx-tools:jhuang0/20230202-build-arm64?expand=1
+https://github.com/jackiehjm/stx-tools/compare/master...jackiehjm:stx-tools:jhuang0/20230202-build-arm64
 
 ```
 cd $STX_REPO_ROOT/stx-tools
@@ -109,7 +109,7 @@ git merge FETCH_HEAD
 ```
 
 * Fixes and workdournad for build-tools
-https://github.com/starlingx/root/compare/master...jackiehjm:stx-cgcs-root:jhuang0/20230202-build-arm64?expand=1
+https://github.com/jackiehjm/stx-cgcs-root/compare/master...jackiehjm:stx-cgcs-root:jhuang0/20230202-build-arm64
 
 ```
 cd $STX_REPO_ROOT/cgcs-root
