@@ -17,13 +17,13 @@
 | 11   | STD    | stx-cert-manager-helm               | jackie | Fixed       | Pass after 22, 24 fixed                            |
 | 12   | STD    | registry-token-server               | jackie | [Fixed][12] |                                                    |
 | 13   | STD    | fm-mgr                              | jackie | [Fixed][13] |                                                    |
-| 14   | STD    | sm                                  | jackie | In-progress |                                                    |
-| 15   | STD    | sm-common                           | jackie | In-progress |                                                    |
-| 16   | STD    | sm-db                               | jackie | In-progress |                                                    |
+| 14   | STD    | sm                                  | jackie | Fixed       | Pass after 15 fixed                                |
+| 15   | STD    | sm-common                           | jackie | [Fixed][15] |                                                    |
+| 16   | STD    | sm-db                               | jackie | Fixed       | Pass after 15 fixed                                |
 | 17   | STD    | gpu-operator                        |        |             | The helm charts are outdated, should be removed.   |
 | 18   | STD    | grub-efi                            |        |             |                                                    |
 | 19   | STD    | grub2                               |        |             |                                                    |
-| 20   | STD    | armada                              | jackie | Fxied       | Pass after 21, 22, 24 fixed                        |
+| 20   | STD    | armada                              | jackie | Fixed       | Pass after 21, 22, 24 fixed                        |
 | 21   | STD    | armada-helm-toolkit                 | jackie | Fixed       | Pass after 22, 24 fixed                            |
 | 22   | STD    | chartmuseum                         | jackie | [Fixed][22] | Ver upgraded 0.12.0 -> 0.13.0, not sure the impact |
 | 23   | STD    | crictl                              | jackie | [Fixed][23] |                                                    |
@@ -93,14 +93,17 @@
 * https://github.com/jackiehjm/stx-integ/compare/master...jackiehjm:stx-integ:jhuang0/20230208-build-arm64
 * https://github.com/jackiehjm/stx-fault/compare/master...jackiehjm:stx-fault:jhuang0/20230208-build-arm64
 * https://github.com/jackiehjm/stx-containers/compare/master...jackiehjm:stx-containers:jhuang0/20230208-build-arm64
+* https://github.com/jackiehjm/stx-ha/compare/master...jackiehjm:stx-ha:jhuang0/20230208-build-arm64
 
 [12]: https://github.com/jackiehjm/stx-containers/commit/c5363249cca07f76cdd6959d2f8471a7f4739cc9
+[15]: https://github.com/jackiehjm/stx-ha/compare/master...jackiehjm:stx-ha:jhuang0/20230208-build-arm64
 [13]: https://github.com/jackiehjm/stx-fault/commit/8ba2dfdfd711531d0b09454c655889910d310902
 [22]: https://github.com/jackiehjm/stx-integ/commit/c46be4067969e938fe572f86504e801e09c030d2
 [23]: https://github.com/jackiehjm/stx-integ/commit/dd67a23edbd63375cb8c5b85690c8c866ccb1710
 [24]: https://github.com/jackiehjm/stx-integ/commit/00e4140b92b06ece1c4cc4441afee9df55c2be9d
 [25]: https://github.com/jackiehjm/stx-integ/commit/a27b2651d19e4e0c0862a237544b85d911b327ca
 [29]: https://github.com/jackiehjm/stx-integ/commit/8fc3b3ef234bfd6b295e7ea5db8f2274917e1766
+
 
 ## Logs
 
