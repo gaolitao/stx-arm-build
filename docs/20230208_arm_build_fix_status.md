@@ -33,7 +33,7 @@
 | 27   | STD    | kubernetes-1.23.1                   | jackie | [Fixed][25] |                                                    |
 | 28   | STD    | kubernetes-1.24.4                   | jackie | [Fixed][25] |                                                    |
 | 29   | STD    | kubectl-cert-manager                | jackie | [Fixed][29] |                                                    |
-| 30   | STD    | kpatch                              |        |             |                                                    |
+| 30   | STD    | kpatch                              | litao  | Checked     | Out of scope [arm64 not supported][52]             |
 | 31   | STD    | qemu                                |        |             |                                                    |
 | 32   | STD    | bnxt-en                             |        |             |                                                    |
 | 33   | STD    | i40e                                |        |             |                                                    |
@@ -48,7 +48,7 @@
 | 42   | STD    | mlnx-ofed-kernel                    |        |             |                                                    |
 | 43   | STD    | qat1.7.l                            |        |             | Should be able to remove                           |
 | 44   | STD    | linux                               |        |             |                                                    |
-| 45   | STD    | kpatch-prebuilt                     |        |             |                                                    |
+| 45   | STD    | kpatch-prebuilt                     | litao  | Checked     | Out of scope [arm64 not supported][52]             |
 | 46   | STD    | pxe-network-installer               |        |             |                                                    |
 | 47   | STD    | mtce                                | jackie | Fixed       | Pass after 13 fixed                                |
 | 48   | STD    | mtce-common                         | jackie | Fixed       | Pass after 13 fixed                                |
@@ -70,7 +70,7 @@
 | 64   | STD    | stx-ptp-notification-helm           | jackie | Fixed       | Pass after 22, 24 fixed                            |
 | 65   | STD    | stx-snmp-helm                       | jackie | Fixed       | Pass after 22, 24 fixed                            |
 | 66   | STD    | opae-sdk                            |        |             | Should be able to remove                           |
-| 67   | STD    | pcm                                 |        |             |                                                    |
+| 67   | STD    | pcm                                 | litao  | Checked     | Out of scope, [intel cpu only][50], [STX vRAN][51] |
 | 68   | STD    | stx-vault-helm                      | jackie | Fixed       | Pass after 22, 24 fixed                            |
 | 69   | STD    | vault-helm                          | jackie | Fixed       | Pass after 22, 24 fixed                            |
 | 70   | RT     | bnxt-en                             |        |             |                                                    |
@@ -101,6 +101,11 @@
 [24]: https://github.com/jackiehjm/stx-integ/commit/00e4140b92b06ece1c4cc4441afee9df55c2be9d
 [25]: https://github.com/jackiehjm/stx-integ/commit/a27b2651d19e4e0c0862a237544b85d911b327ca
 [29]: https://github.com/jackiehjm/stx-integ/commit/8fc3b3ef234bfd6b295e7ea5db8f2274917e1766
+
+[50]: https://github.com/intel/pcm
+[51]: https://docs.starlingx.io/usertasks/kubernetes/vran-tools-2c3ee49f4b0b.html
+[52]: https://github.com/dynup/kpatch/#supported-architectures
+
 
 ## Logs
 
