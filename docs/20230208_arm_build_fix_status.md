@@ -34,7 +34,7 @@
 | 28   | STD    | kubernetes-1.24.4                   | jackie | [Fixed][25] |                                                    |
 | 29   | STD    | kubectl-cert-manager                | jackie | [Fixed][29] |                                                    |
 | 30   | STD    | kpatch                              | litao  | Checked     | Out of scope [arm64 not supported][52]             |
-| 31   | STD    | qemu                                | jackie |             |                                                    |
+| 31   | STD    | qemu                                | jackie |             | Should be able to remove                           |
 | 32   | STD    | bnxt-en                             |        |             |                                                    |
 | 33   | STD    | i40e                                |        |             |                                                    |
 | 34   | STD    | i40e-cvl-2.54                       |        |             |                                                    |
@@ -47,9 +47,9 @@
 | 41   | STD    | iqvlinux                            |        |             |                                                    |
 | 42   | STD    | mlnx-ofed-kernel                    |        |             |                                                    |
 | 43   | STD    | qat1.7.l                            |        |             | Should be able to remove                           |
-| 44   | STD    | linux                               |        |             |                                                    |
+| 44   | STD    | linux                               | jackie | [Fixed][44] |                                                    |
 | 45   | STD    | kpatch-prebuilt                     | litao  | Checked     | Out of scope [arm64 not supported][52]             |
-| 46   | STD    | pxe-network-installer               |        |             |                                                    |
+| 46   | STD    | pxe-network-installer               | jackie | In-Progress |                                                    |
 | 47   | STD    | mtce                                | jackie | Fixed       | Pass after 13 fixed                                |
 | 48   | STD    | mtce-common                         | jackie | Fixed       | Pass after 13 fixed                                |
 | 49   | STD    | metrics-server-helm                 | jackie | Fixed       | Pass after 22, 24 fixed                            |
@@ -85,7 +85,7 @@
 | 79   | RT     | iqvlinux                            |        |             |                                                    |
 | 80   | RT     | mlnx-ofed-kernel                    |        |             |                                                    |
 | 81   | RT     | qat1.7.l                            |        |             |                                                    |
-| 82   | RT     | linux-rt                            |        |             |                                                    |
+| 82   | RT     | linux-rt                            | jackie | In-Progress |                                                    |
 | 83   | RT     | kpatch-prebuilt                     |        |             |                                                    |
 
 ## Fixes
@@ -94,6 +94,7 @@
 * https://github.com/jackiehjm/stx-fault/compare/master...jackiehjm:stx-fault:jhuang0/20230208-build-arm64
 * https://github.com/jackiehjm/stx-containers/compare/master...jackiehjm:stx-containers:jhuang0/20230208-build-arm64
 * https://github.com/jackiehjm/stx-ha/compare/master...jackiehjm:stx-ha:jhuang0/20230208-build-arm64
+* https://github.com/jackiehjm/stx-kernel/compare/master...jackiehjm:stx-kernel:jhuang0/20230208-build-arm64
 
 [12]: https://github.com/jackiehjm/stx-containers/commit/c5363249cca07f76cdd6959d2f8471a7f4739cc9
 [15]: https://github.com/jackiehjm/stx-ha/compare/master...jackiehjm:stx-ha:jhuang0/20230208-build-arm64
@@ -104,6 +105,7 @@
 [24]: https://github.com/jackiehjm/stx-integ/commit/00e4140b92b06ece1c4cc4441afee9df55c2be9d
 [25]: https://github.com/jackiehjm/stx-integ/commit/a27b2651d19e4e0c0862a237544b85d911b327ca
 [29]: https://github.com/jackiehjm/stx-integ/commit/8fc3b3ef234bfd6b295e7ea5db8f2274917e1766
+[44]: https://github.com/jackiehjm/stx-kernel/commit/c408447cb9206e12343bc98746cc3999b278c130
 
 [50]: https://github.com/intel/pcm
 [51]: https://docs.starlingx.io/usertasks/kubernetes/vran-tools-2c3ee49f4b0b.html
