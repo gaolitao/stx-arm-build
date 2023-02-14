@@ -49,7 +49,7 @@
 | 43   | STD    | qat1.7.l                            |        |             | Should be able to remove                           |
 | 44   | STD    | linux                               | jackie | [Fixed][44] |                                                    |
 | 45   | STD    | kpatch-prebuilt                     | litao  | Checked     | Out of scope [arm64 not supported][52]             |
-| 46   | STD    | pxe-network-installer               | jackie | In-Progress |                                                    |
+| 46   | STD    | pxe-network-installer               | jackie | [Fixed][46] |                                                    |
 | 47   | STD    | mtce                                | jackie | Fixed       | Pass after 13 fixed                                |
 | 48   | STD    | mtce-common                         | jackie | Fixed       | Pass after 13 fixed                                |
 | 49   | STD    | metrics-server-helm                 | jackie | Fixed       | Pass after 22, 24 fixed                            |
@@ -69,32 +69,35 @@
 | 63   | STD    | stx-portieris-helm                  | jackie | Fixed       | Pass after 22, 24 fixed                            |
 | 64   | STD    | stx-ptp-notification-helm           | jackie | Fixed       | Pass after 22, 24 fixed                            |
 | 65   | STD    | stx-snmp-helm                       | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 66   | STD    | opae-sdk                            |        |             | Should be able to remove                           |
-| 67   | STD    | pcm                                 | litao  | Checked     | Out of scope, [intel cpu only][50], [STX vRAN][51] |
+| 66   | STD    | opae-sdk                            | jackie | Removed     | Should be able to remove                           |
+| 67   | STD    | pcm                                 | litao  | Removed     | Out of scope, [intel cpu only][50], [STX vRAN][51] |
 | 68   | STD    | stx-vault-helm                      | jackie | Fixed       | Pass after 22, 24 fixed                            |
 | 69   | STD    | vault-helm                          | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 70   | RT     | bnxt-en                             |        |             |                                                    |
-| 71   | RT     | i40e                                |        |             |                                                    |
-| 72   | RT     | i40e-cvl-2.54                       |        |             |                                                    |
-| 73   | RT     | iavf                                |        |             |                                                    |
-| 74   | RT     | iavf-cvl-2.54                       |        |             |                                                    |
-| 75   | RT     | ice                                 |        |             |                                                    |
-| 76   | RT     | ice-cvl-2.54                        |        |             |                                                    |
-| 77   | RT     | igb-uio                             |        |             |                                                    |
-| 78   | RT     | kmod-opae-fpga-driver               |        |             |                                                    |
-| 79   | RT     | iqvlinux                            |        |             |                                                    |
-| 80   | RT     | mlnx-ofed-kernel                    |        |             |                                                    |
-| 81   | RT     | qat1.7.l                            |        |             |                                                    |
-| 82   | RT     | linux-rt                            | jackie | In-Progress |                                                    |
-| 83   | RT     | kpatch-prebuilt                     |        |             |                                                    |
+| 70   | RT     | bnxt-en                             | jackie | Removed     |                                                    |
+| 71   | RT     | i40e                                | jackie | Removed     |                                                    |
+| 72   | RT     | i40e-cvl-2.54                       | jackie | Removed     |                                                    |
+| 73   | RT     | iavf                                | jackie | Removed     |                                                    |
+| 74   | RT     | iavf-cvl-2.54                       | jackie | Removed     |                                                    |
+| 75   | RT     | ice                                 | jackie | Removed     |                                                    |
+| 76   | RT     | ice-cvl-2.54                        | jackie | Removed     |                                                    |
+| 77   | RT     | igb-uio                             | jackie | Removed     |                                                    |
+| 78   | RT     | kmod-opae-fpga-driver               | jackie | Removed     |                                                    |
+| 79   | RT     | iqvlinux                            | jackie | Removed     |                                                    |
+| 80   | RT     | mlnx-ofed-kernel                    | jackie | Removed     |                                                    |
+| 81   | RT     | qat1.7.l                            | jackie | Removed     |                                                    |
+| 82   | RT     | linux-rt                            | jackie | Removed     |                                                    |
+| 83   | RT     | kpatch-prebuilt                     | jackie | Removed     |                                                    |
 
 ## Fixes
 
+* https://github.com/jackiehjm/stx-cgcs-root/compare/master...jackiehjm:stx-cgcs-root:jhuang0/20230202-build-arm64
+* https://github.com/jackiehjm/stx-tools/compare/master...jackiehjm:stx-tools:jhuang0/20230202-build-arm64
 * https://github.com/jackiehjm/stx-integ/compare/master...jackiehjm:stx-integ:jhuang0/20230208-build-arm64
 * https://github.com/jackiehjm/stx-fault/compare/master...jackiehjm:stx-fault:jhuang0/20230208-build-arm64
 * https://github.com/jackiehjm/stx-containers/compare/master...jackiehjm:stx-containers:jhuang0/20230208-build-arm64
 * https://github.com/jackiehjm/stx-ha/compare/master...jackiehjm:stx-ha:jhuang0/20230208-build-arm64
 * https://github.com/jackiehjm/stx-kernel/compare/master...jackiehjm:stx-kernel:jhuang0/20230208-build-arm64
+* https://github.com/jackiehjm/stx-metal/compare/master-20230214...jackiehjm:stx-metal:jhuang0/20230214-build-arm64
 
 [12]: https://github.com/jackiehjm/stx-containers/commit/c5363249cca07f76cdd6959d2f8471a7f4739cc9
 [15]: https://github.com/jackiehjm/stx-ha/compare/master...jackiehjm:stx-ha:jhuang0/20230208-build-arm64
@@ -106,10 +109,20 @@
 [25]: https://github.com/jackiehjm/stx-integ/commit/a27b2651d19e4e0c0862a237544b85d911b327ca
 [29]: https://github.com/jackiehjm/stx-integ/commit/8fc3b3ef234bfd6b295e7ea5db8f2274917e1766
 [44]: https://github.com/jackiehjm/stx-kernel/commit/c408447cb9206e12343bc98746cc3999b278c130
+[46]: https://github.com/jackiehjm/stx-metal/commit/8fd372b2c6b771b9f1f34f7e12cd435110cfbfbc
 
 [50]: https://github.com/intel/pcm
 [51]: https://docs.starlingx.io/usertasks/kubernetes/vran-tools-2c3ee49f4b0b.html
 [52]: https://github.com/dynup/kpatch/#supported-architectures
+
+### workarounds for build-image
+
+* https://github.com/jackiehjm/stx-cgcs-root/compare/master-20230213...jackiehjm:stx-cgcs-root:jhuang0/20230213-build-arm64
+* https://github.com/jackiehjm/stx-tools/compare/master-20230202...jackiehjm:stx-tools:jhuang0/20230213-build-arm64
+* https://github.com/jackiehjm/stx-kernel/compare/master...jackiehjm:stx-kernel:jhuang0/20230213-build-arm64-temp
+* https://github.com/jackiehjm/stx-integ/compare/master...jackiehjm:stx-integ:jhuang0/20230213-build-arm64-temp
+* https://github.com/jackiehjm/stx-metal/compare/master-20230214...jackiehjm:stx-metal:jhuang0/20230214-build-arm64
+
 
 ## Test Results
 
