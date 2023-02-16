@@ -2,91 +2,91 @@
 
 ## Failed packages and fix status
 
-| #    | STD/RT | Pkg name                            | Owner  | Status      | Comment                                            |
-| ---- | ------ | ----------------------------------- | ------ | ----------- | -------------------------------------------------- |
-| 1    | STD    | stx-sdo-helm                        | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 2    | STD    | istio-helm                          | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 3    | STD    | kiali-helm                          | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 4    | STD    | stx-istio-helm                      | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 5    | STD    | stx-kubevirt-app-helm               | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 6    | STD    | stx-oran-o2-helm                    | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 7    | STD    | stx-security-profiles-operator-helm | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 8    | STD    | stx-sriov-fec-operator-helm         | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 9    | STD    | stx-sts-silicom-helm                | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 10   | STD    | stx-audit-helm                      | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 11   | STD    | stx-cert-manager-helm               | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 12   | STD    | registry-token-server               | jackie | [Fixed][12] |                                                    |
-| 13   | STD    | fm-mgr                              | jackie | [Fixed][13] |                                                    |
-| 14   | STD    | sm                                  | jackie | Fixed       | Pass after 15 fixed                                |
-| 15   | STD    | sm-common                           | jackie | [Fixed][15] |                                                    |
-| 16   | STD    | sm-db                               | jackie | Fixed       | Pass after 15 fixed                                |
-| 17   | STD    | gpu-operator                        | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 18   | STD    | grub-efi                            | jackie | [Fixed][19] |                                                    |
-| 19   | STD    | grub2                               | jackie | [Fixed][19] |                                                    |
-| 20   | STD    | armada                              | jackie | Fixed       | Pass after 21, 22, 24 fixed                        |
-| 21   | STD    | armada-helm-toolkit                 | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 22   | STD    | chartmuseum                         | jackie | [Fixed][22] | Ver upgraded 0.12.0 -> 0.13.0, not sure the impact |
-| 23   | STD    | crictl                              | jackie | [Fixed][23] |                                                    |
-| 24   | STD    | helm                                | jackie | [Fixed][24] |                                                    |
-| 25   | STD    | kubernetes-1.21.8                   | jackie | [Fixed][25] |                                                    |
-| 26   | STD    | kubernetes-1.22.5                   | jackie | [Fixed][25] |                                                    |
-| 27   | STD    | kubernetes-1.23.1                   | jackie | [Fixed][25] |                                                    |
-| 28   | STD    | kubernetes-1.24.4                   | jackie | [Fixed][25] |                                                    |
-| 29   | STD    | kubectl-cert-manager                | jackie | [Fixed][29] |                                                    |
-| 30   | STD    | kpatch                              | litao  | Checked     | Out of scope [arm64 not supported][52]             |
-| 31   | STD    | qemu                                | jackie |             | Should be able to remove                           |
-| 32   | STD    | bnxt-en                             |        |             |                                                    |
-| 33   | STD    | i40e                                |        |             |                                                    |
-| 34   | STD    | i40e-cvl-2.54                       |        |             |                                                    |
-| 35   | STD    | iavf                                |        |             |                                                    |
-| 36   | STD    | iavf-cvl-2.54                       |        |             |                                                    |
-| 37   | STD    | ice                                 |        |             |                                                    |
-| 38   | STD    | ice-cvl-2.54                        |        |             |                                                    |
-| 39   | STD    | igb-uio                             |        |             |                                                    |
-| 40   | STD    | kmod-opae-fpga-driver               |        |             | Should be able to remove                           |
-| 41   | STD    | iqvlinux                            |        |             |                                                    |
-| 42   | STD    | mlnx-ofed-kernel                    |        |             |                                                    |
-| 43   | STD    | qat1.7.l                            |        |             | Should be able to remove                           |
-| 44   | STD    | linux                               | jackie | [Fixed][44] |                                                    |
-| 45   | STD    | kpatch-prebuilt                     | litao  | Checked     | Out of scope [arm64 not supported][52]             |
-| 46   | STD    | pxe-network-installer               | jackie | [Fixed][46] |                                                    |
-| 47   | STD    | mtce                                | jackie | Fixed       | Pass after 13 fixed                                |
-| 48   | STD    | mtce-common                         | jackie | Fixed       | Pass after 13 fixed                                |
-| 49   | STD    | metrics-server-helm                 | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 50   | STD    | stx-metrics-server-helm             | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 51   | STD    | monitor-helm                        | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 52   | STD    | monitor-helm-elastic                | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 53   | STD    | stx-monitor-helm                    | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 54   | STD    | stx-nginx-ingress-controller-helm   | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 55   | STD    | stx-oidc-auth-helm                  | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 56   | STD    | openstack-helm                      | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 57   | STD    | openstack-helm-infra                | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 58   | STD    | stx-openstack-helm                  | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 59   | STD    | stx-openstack-helm-fluxcd           | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 60   | STD    | platform-helm                       | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 61   | STD    | stx-platform-helm                   | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 62   | STD    | portieris-helm                      | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 63   | STD    | stx-portieris-helm                  | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 64   | STD    | stx-ptp-notification-helm           | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 65   | STD    | stx-snmp-helm                       | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 66   | STD    | opae-sdk                            | jackie | Removed     | Should be able to remove                           |
-| 67   | STD    | pcm                                 | litao  | Removed     | Out of scope, [intel cpu only][50], [STX vRAN][51] |
-| 68   | STD    | stx-vault-helm                      | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 69   | STD    | vault-helm                          | jackie | Fixed       | Pass after 22, 24 fixed                            |
-| 70   | RT     | bnxt-en                             | jackie | Removed     |                                                    |
-| 71   | RT     | i40e                                | jackie | Removed     |                                                    |
-| 72   | RT     | i40e-cvl-2.54                       | jackie | Removed     |                                                    |
-| 73   | RT     | iavf                                | jackie | Removed     |                                                    |
-| 74   | RT     | iavf-cvl-2.54                       | jackie | Removed     |                                                    |
-| 75   | RT     | ice                                 | jackie | Removed     |                                                    |
-| 76   | RT     | ice-cvl-2.54                        | jackie | Removed     |                                                    |
-| 77   | RT     | igb-uio                             | jackie | Removed     |                                                    |
-| 78   | RT     | kmod-opae-fpga-driver               | jackie | Removed     |                                                    |
-| 79   | RT     | iqvlinux                            | jackie | Removed     |                                                    |
-| 80   | RT     | mlnx-ofed-kernel                    | jackie | Removed     |                                                    |
-| 81   | RT     | qat1.7.l                            | jackie | Removed     |                                                    |
-| 82   | RT     | linux-rt                            | jackie | Removed     |                                                    |
-| 83   | RT     | kpatch-prebuilt                     | jackie | Removed     |                                                    |
+| #  | STD/RT | Pkg name                            | Owner  | Status      | Comment                                            |
+| -- | ------ | ----------------------------------- | ------ | ----------- | -------------------------------------------------- |
+| 1  | STD    | stx-sdo-helm                        | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 2  | STD    | istio-helm                          | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 3  | STD    | kiali-helm                          | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 4  | STD    | stx-istio-helm                      | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 5  | STD    | stx-kubevirt-app-helm               | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 6  | STD    | stx-oran-o2-helm                    | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 7  | STD    | stx-security-profiles-operator-helm | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 8  | STD    | stx-sriov-fec-operator-helm         | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 9  | STD    | stx-sts-silicom-helm                | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 10 | STD    | stx-audit-helm                      | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 11 | STD    | stx-cert-manager-helm               | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 12 | STD    | registry-token-server               | jackie | [Fixed][12] |                                                    |
+| 13 | STD    | fm-mgr                              | jackie | [Fixed][13] |                                                    |
+| 14 | STD    | sm                                  | jackie | Fixed       | Pass after 15 fixed                                |
+| 15 | STD    | sm-common                           | jackie | [Fixed][15] |                                                    |
+| 16 | STD    | sm-db                               | jackie | Fixed       | Pass after 15 fixed                                |
+| 17 | STD    | gpu-operator                        | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 18 | STD    | grub-efi                            | jackie | [Fixed][19] |                                                    |
+| 19 | STD    | grub2                               | jackie | [Fixed][19] |                                                    |
+| 20 | STD    | armada                              | jackie | Fixed       | Pass after 21, 22, 24 fixed                        |
+| 21 | STD    | armada-helm-toolkit                 | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 22 | STD    | chartmuseum                         | jackie | [Fixed][22] | Ver upgraded 0.12.0 -> 0.13.0, not sure the impact |
+| 23 | STD    | crictl                              | jackie | [Fixed][23] |                                                    |
+| 24 | STD    | helm                                | jackie | [Fixed][24] |                                                    |
+| 25 | STD    | kubernetes-1.21.8                   | jackie | [Fixed][25] |                                                    |
+| 26 | STD    | kubernetes-1.22.5                   | jackie | [Fixed][25] |                                                    |
+| 27 | STD    | kubernetes-1.23.1                   | jackie | [Fixed][25] |                                                    |
+| 28 | STD    | kubernetes-1.24.4                   | jackie | [Fixed][25] |                                                    |
+| 29 | STD    | kubectl-cert-manager                | jackie | [Fixed][29] |                                                    |
+| 30 | STD    | kpatch                              | litao  | Checked     | Out of scope[arm64 not supported][52]              |
+| 31 | STD    | qemu                                | jackie |             | Should be able to remove                           |
+| 32 | STD    | bnxt-en                             |        |             |                                                    |
+| 33 | STD    | i40e                                |        |             |                                                    |
+| 34 | STD    | i40e-cvl-2.54                       |        |             |                                                    |
+| 35 | STD    | iavf                                |        |             |                                                    |
+| 36 | STD    | iavf-cvl-2.54                       |        |             |                                                    |
+| 37 | STD    | ice                                 |        |             |                                                    |
+| 38 | STD    | ice-cvl-2.54                        |        |             |                                                    |
+| 39 | STD    | igb-uio                             |        |             |                                                    |
+| 40 | STD    | kmod-opae-fpga-driver               |        |             | Should be able to remove                           |
+| 41 | STD    | iqvlinux                            |        |             |                                                    |
+| 42 | STD    | mlnx-ofed-kernel                    |        |             |                                                    |
+| 43 | STD    | qat1.7.l                            |        |             | Should be able to remove                           |
+| 44 | STD    | linux                               | jackie | [Fixed][44] |                                                    |
+| 45 | STD    | kpatch-prebuilt                     | litao  | Checked     | Out of scope[arm64 not supported][52]              |
+| 46 | STD    | pxe-network-installer               | jackie | [Fixed][46] |                                                    |
+| 47 | STD    | mtce                                | jackie | Fixed       | Pass after 13 fixed                                |
+| 48 | STD    | mtce-common                         | jackie | Fixed       | Pass after 13 fixed                                |
+| 49 | STD    | metrics-server-helm                 | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 50 | STD    | stx-metrics-server-helm             | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 51 | STD    | monitor-helm                        | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 52 | STD    | monitor-helm-elastic                | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 53 | STD    | stx-monitor-helm                    | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 54 | STD    | stx-nginx-ingress-controller-helm   | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 55 | STD    | stx-oidc-auth-helm                  | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 56 | STD    | openstack-helm                      | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 57 | STD    | openstack-helm-infra                | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 58 | STD    | stx-openstack-helm                  | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 59 | STD    | stx-openstack-helm-fluxcd           | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 60 | STD    | platform-helm                       | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 61 | STD    | stx-platform-helm                   | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 62 | STD    | portieris-helm                      | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 63 | STD    | stx-portieris-helm                  | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 64 | STD    | stx-ptp-notification-helm           | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 65 | STD    | stx-snmp-helm                       | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 66 | STD    | opae-sdk                            | jackie | Removed     | Should be able to remove                           |
+| 67 | STD    | pcm                                 | litao  | Removed     | Out of scope,[intel cpu only][50], [STX vRAN][51]  |
+| 68 | STD    | stx-vault-helm                      | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 69 | STD    | vault-helm                          | jackie | Fixed       | Pass after 22, 24 fixed                            |
+| 70 | RT     | bnxt-en                             | jackie | Removed     |                                                    |
+| 71 | RT     | i40e                                | jackie | Removed     |                                                    |
+| 72 | RT     | i40e-cvl-2.54                       | jackie | Removed     |                                                    |
+| 73 | RT     | iavf                                | jackie | Removed     |                                                    |
+| 74 | RT     | iavf-cvl-2.54                       | jackie | Removed     |                                                    |
+| 75 | RT     | ice                                 | jackie | Removed     |                                                    |
+| 76 | RT     | ice-cvl-2.54                        | jackie | Removed     |                                                    |
+| 77 | RT     | igb-uio                             | jackie | Removed     |                                                    |
+| 78 | RT     | kmod-opae-fpga-driver               | jackie | Removed     |                                                    |
+| 79 | RT     | iqvlinux                            | jackie | Removed     |                                                    |
+| 80 | RT     | mlnx-ofed-kernel                    | jackie | Removed     |                                                    |
+| 81 | RT     | qat1.7.l                            | jackie | Removed     |                                                    |
+| 82 | RT     | linux-rt                            | jackie | Removed     |                                                    |
+| 83 | RT     | kpatch-prebuilt                     | jackie | Removed     |                                                    |
 
 ## Fixes
 
@@ -99,22 +99,6 @@
 * https://github.com/jackiehjm/stx-kernel/compare/master...jackiehjm:stx-kernel:jhuang0/20230208-build-arm64
 * https://github.com/jackiehjm/stx-metal/compare/master-20230214...jackiehjm:stx-metal:jhuang0/20230214-build-arm64
 
-[12]: https://github.com/jackiehjm/stx-containers/commit/c5363249cca07f76cdd6959d2f8471a7f4739cc9
-[15]: https://github.com/jackiehjm/stx-ha/compare/master...jackiehjm:stx-ha:jhuang0/20230208-build-arm64
-[13]: https://github.com/jackiehjm/stx-fault/commit/8ba2dfdfd711531d0b09454c655889910d310902
-[19]: https://github.com/jackiehjm/stx-integ/commit/ba578c673cdd7679050fe64cf8031b746fb4502a
-[22]: https://github.com/jackiehjm/stx-integ/commit/c46be4067969e938fe572f86504e801e09c030d2
-[23]: https://github.com/jackiehjm/stx-integ/commit/dd67a23edbd63375cb8c5b85690c8c866ccb1710
-[24]: https://github.com/jackiehjm/stx-integ/commit/00e4140b92b06ece1c4cc4441afee9df55c2be9d
-[25]: https://github.com/jackiehjm/stx-integ/commit/a27b2651d19e4e0c0862a237544b85d911b327ca
-[29]: https://github.com/jackiehjm/stx-integ/commit/8fc3b3ef234bfd6b295e7ea5db8f2274917e1766
-[44]: https://github.com/jackiehjm/stx-kernel/commit/c408447cb9206e12343bc98746cc3999b278c130
-[46]: https://github.com/jackiehjm/stx-metal/commit/8fd372b2c6b771b9f1f34f7e12cd435110cfbfbc
-
-[50]: https://github.com/intel/pcm
-[51]: https://docs.starlingx.io/usertasks/kubernetes/vran-tools-2c3ee49f4b0b.html
-[52]: https://github.com/dynup/kpatch/#supported-architectures
-
 ### workarounds for build-image
 
 * https://github.com/jackiehjm/stx-cgcs-root/compare/master-20230213...jackiehjm:stx-cgcs-root:jhuang0/20230213-build-arm64
@@ -122,7 +106,6 @@
 * https://github.com/jackiehjm/stx-kernel/compare/master...jackiehjm:stx-kernel:jhuang0/20230213-build-arm64-temp
 * https://github.com/jackiehjm/stx-integ/compare/master...jackiehjm:stx-integ:jhuang0/20230213-build-arm64-temp
 * https://github.com/jackiehjm/stx-metal/compare/master-20230214...jackiehjm:stx-metal:jhuang0/20230214-build-arm64
-
 
 ## Test Results
 
@@ -279,3 +262,63 @@
 2023-02-02 20:44:58,712 - debcontroller - ERROR: kpatch-prebuilt
 
 ```
+
+## Container images pulled during bootstrapping
+
+### Pulled and used image list:
+
+| #  | Image name                                      | ARM version available(Y/N)? | Owner | Status | Comment                                                       |
+| -- | ----------------------------------------------- | --------------------------- | ----- | ------ | ------------------------------------------------------------- |
+| 1  | docker.io/fluxcd/helm-controller:v0.27.0        | Y                           |       |        |                                                               |
+| 2  | docker.io/fluxcd/source-controller:v0.32.1      | Y                           |       |        |                                                               |
+| 3  | docker.io/starlingx/armada-image:stx.7.0-v1.0.0 | N                           |       | todo   | Need to rebuild via stx                                       |
+| 4  | ghcr.io/helm/tiller:v2.16.9                     | N                           |       | todo   | not support arm64, but<br />[tiller-multiarch support it][54] |
+| 5  | ghcr.io/k8snetworkplumbingwg/multus-cni:v3.9.2  | Y                           |       |        |                                                               |
+| 6  | ghcr.io/k8snetworkplumbingwg/sriov-cni:v2.6.3   | N                           |       | todo   | seems that arm64 support<br />was [added last month][53]      |
+| 7  | k8s.gcr.io/coredns/coredns:v1.8.6               | N                           |       | todo   | should be supported.<br />need to find the alternative        |
+| 8  | k8s.gcr.io/ingress-nginx/controller:v1.1.1      | Y                           |       |        |                                                               |
+| 9  | k8s.gcr.io/kube-apiserver:v1.24.4               | Y                           |       |        |                                                               |
+| 10 | k8s.gcr.io/kube-controller-manager:v1.24.4      | Y                           |       |        |                                                               |
+| 11 | k8s.gcr.io/kube-proxy:v1.24.4                   | Y                           |       |        |                                                               |
+| 12 | k8s.gcr.io/kube-scheduler:v1.24.4               | Y                           |       |        |                                                               |
+| 13 | k8s.gcr.io/pause:3.7                            | Y                           |       |        |                                                               |
+| 14 | quay.io/calico/kube-controllers:v3.24.0         | Y                           |       |        |                                                               |
+| 15 | quay.io/calico/node:v3.24.0                     | Y                           |       |        |                                                               |
+| 16 | quay.io/jetstack/cert-manager-acmesolver:v1.7.1 | Y                           |       |        |                                                               |
+| 17 | quay.io/jetstack/cert-manager-cainjector:v1.7.1 | Y                           |       |        |                                                               |
+| 18 | quay.io/jetstack/cert-manager-controller:v1.7.1 | Y                           |       |        |                                                               |
+| 19 | quay.io/jetstack/cert-manager-ctl:v1.7.1        | Y                           |       |        |                                                               |
+| 20 | gcr.io/kubebuilder/kube-rbac-proxy:v0.11.0      | Y                           |       |        |                                                               |
+
+### Pulled but not used image list:
+
+| #  | Image name                                                        | ARM version available(Y/N)? | Owner | Status | Comment                                                                                |
+| -- | ----------------------------------------------------------------- | --------------------------- | ----- | ------ | -------------------------------------------------------------------------------------- |
+| 1  | docker.io/starlingx/n3000-opae:stx.8.0-v1.0.2                     | N                           |       |        | to remove                                                                              |
+| 2  | docker.io/wind-river/cloud-platform-deployment-manager:WRCP_22.12 | N                           |       |        | to remove                                                                              |
+| 3  | docker.io/wind-river/dm-monitor:WRCP_22.12-v1.0.0                 | N                           |       |        | to remove                                                                              |
+| 4  | quay.io/stackanetes/kubernetes-entrypoint:v0.3.1                  | N                           |       |        | to remove                                                                              |
+| 5  | ghcr.io/k8snetworkplumbingwg/sriov-network-device-plugin:v3.5.1   | N                           |       |        | to remove                                                                              |
+| 6  | k8s.gcr.io/defaultbackend-amd64:1.5                               | N                           |       |        | to remove,<br />but there is another iamge named:<br />k8s.gcr.io/defaultbackend-arm64 |
+| 7  | k8s.gcr.io/etcd:3.5.3-0                                           | Y                           |       |        | keep                                                                                   |
+| 8  | k8s.gcr.io/ingress-nginx/kube-webhook-certgen:v1.1.1              | Y                           |       |        | keep                                                                                   |
+| 9  | quay.io/calico/cni:v3.24.0                                        | Y                           |       |        | keep                                                                                   |
+| 10 | quay.io/k8scsi/snapshot-controller:v2.0.0-rc2                     | N                           |       |        | to remove                                                                              |
+| 11 |                                                                   |                             |       |        |                                                                                        |
+
+[12]: https://github.com/jackiehjm/stx-containers/commit/c5363249cca07f76cdd6959d2f8471a7f4739cc9
+[15]: https://github.com/jackiehjm/stx-ha/compare/master...jackiehjm:stx-ha:jhuang0/20230208-build-arm64
+[13]: https://github.com/jackiehjm/stx-fault/commit/8ba2dfdfd711531d0b09454c655889910d310902
+[19]: https://github.com/jackiehjm/stx-integ/commit/ba578c673cdd7679050fe64cf8031b746fb4502a
+[22]: https://github.com/jackiehjm/stx-integ/commit/c46be4067969e938fe572f86504e801e09c030d2
+[23]: https://github.com/jackiehjm/stx-integ/commit/dd67a23edbd63375cb8c5b85690c8c866ccb1710
+[24]: https://github.com/jackiehjm/stx-integ/commit/00e4140b92b06ece1c4cc4441afee9df55c2be9d
+[25]: https://github.com/jackiehjm/stx-integ/commit/a27b2651d19e4e0c0862a237544b85d911b327ca
+[29]: https://github.com/jackiehjm/stx-integ/commit/8fc3b3ef234bfd6b295e7ea5db8f2274917e1766
+[44]: https://github.com/jackiehjm/stx-kernel/commit/c408447cb9206e12343bc98746cc3999b278c130
+[46]: https://github.com/jackiehjm/stx-metal/commit/8fd372b2c6b771b9f1f34f7e12cd435110cfbfbc
+[50]: https://github.com/intel/pcm
+[51]: https://docs.starlingx.io/usertasks/kubernetes/vran-tools-2c3ee49f4b0b.html
+[52]: https://github.com/dynup/kpatch/#supported-architectures
+[53]: https://github.com/k8snetworkplumbingwg/sriov-cni
+[54]: https://github.com/jessestuart/tiller-multiarch
